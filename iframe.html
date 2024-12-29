@@ -3,9 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@n8n/chat"></script>
+    <title>Chat Widget</title>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof createChat === 'undefined') {
+                console.error('createChat is not defined. Ensure the @n8n/chat script is loaded correctly.');
+                return;
+            }
+
+            createChat({
+                webhookUrl: 'https://criticaledge.app.n8n.cloud/webhook/721c41fd-0231-4fcf-a3a2-3a741bbe0472/chat',
+                mode: 'fullscreen', // Use 'window' for a smaller widget
+                showWelcomeScreen: true,
+                initialMessages: [
+                    'Welcome!',
+                    'My name is Audrey. How can I assist you today?'
+                ],
+                i18n: {
+                    en: {
+                        title: 'Hi there! 👋',
+                        subtitle: 'Feel free to ask anything!',
+                        inputPlaceholder: 'Type your message...',
+                    },
+                },
+            });
+        });
+    </script>
 </body>
 </html>
