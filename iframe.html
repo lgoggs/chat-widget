@@ -7,23 +7,24 @@
     <style>
         /* Custom color overrides */
         :root {
-            /* Primary color (was blue, now #c94043) */
-            --chat--color-primary: #c94043;
-            --chat--color-primary-shade-50: #b63a3b; /* Darker shade */
-            --chat--color-primary-shade-100: #9e3434; /* Darkest shade */
+            /* Header (banner) color */
+            --chat--header--background: #c94043; /* Red for the banner */
+            --chat--header--color: #ffffff; /* White text for contrast */
 
-            /* Secondary color (was pink, now black) */
-            --chat--color-secondary: #000000;
-            --chat--color-secondary-shade-50: #000000;
+            /* Button and interactive element colors */
+            --chat--color-primary: #000000; /* Black for buttons and other elements */
+            --chat--color-primary-shade-50: #333333; /* Darker black for hover states */
+            --chat--color-primary-shade-100: #000000; /* Black remains for active states */
 
-            /* Other colors remain unchanged for readability */
+            /* Message colors */
+            --chat--message--bot--background: var(--chat--color-light); /* Light for bot messages */
+            --chat--message--user--background: var(--chat--color-primary); /* Black for user messages */
+            --chat--message--user--color: #ffffff; /* White text for user messages */
+
+            /* Other unchanged colors for consistency */
             --chat--color-white: #ffffff;
             --chat--color-light: #f2f4f8;
             --chat--color-dark: #101330;
-
-            /* Optional adjustments for the chat appearance */
-            --chat--message--bot--background: var(--chat--color-light);
-            --chat--message--user--background: var(--chat--color-secondary);
         }
     </style>
     <title>Chat Widget</title>
