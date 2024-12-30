@@ -4,6 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+    <style>
+        /* Custom color overrides */
+        :root {
+            /* Primary color (was blue, now #c94043) */
+            --chat--color-primary: #c94043;
+            --chat--color-primary-shade-50: #b63a3b; /* Darker shade */
+            --chat--color-primary-shade-100: #9e3434; /* Darkest shade */
+
+            /* Secondary color (was pink, now black) */
+            --chat--color-secondary: #000000;
+            --chat--color-secondary-shade-50: #000000;
+
+            /* Other colors remain unchanged for readability */
+            --chat--color-white: #ffffff;
+            --chat--color-light: #f2f4f8;
+            --chat--color-dark: #101330;
+
+            /* Optional adjustments for the chat appearance */
+            --chat--message--bot--background: var(--chat--color-light);
+            --chat--message--user--background: var(--chat--color-secondary);
+        }
+    </style>
     <title>Chat Widget</title>
 </head>
 <body>
